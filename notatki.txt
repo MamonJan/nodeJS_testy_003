@@ -19,5 +19,5 @@ npm install express pug body-parser cookie-parser connect-flash --save
     * renderowanie widoków
     * Obsługa plków statycznych
 
-Zainstaluj, pomoże to w odswieżaniu prz zmianach kodu: 
+Zainstaluj, pomoże to w przeładowaniu serwera node po zmianach w plikach projektu git: 
     npm install -g nodemon 
