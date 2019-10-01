@@ -1,0 +1,23 @@
+https://www.youtube.com/playlist?list=PLjHmWifVUNMKyW8SZUSQCoaYOROcWAKkt
+
+* express - framework NodeJS - najpopularniejszy
+* pug - Silnik szablonów (HTML), dawniej zwany jako JADE
+* body-parser - moduł do obsługi danych requestów typu POST
+* cookie-parser - moduł do obsługi ciasteczek
+* connect-flash - moduł do przesyłania tymczasowych komunikatów Np. "Zostałeś zalogowany"
+
+npm init
+powstanie package.json
+npm install express pug body-parser cookie-parser connect-flash --save
+
+1) Knfiguracja
+    * ustawienie aplikacji oraz serwera
+        ** konfiguracja serwera to server.js
+        ** konfiguracja aplikacji to app.js
+
+    * obsługa scieżek (routes)
+    * renderowanie widoków
+    * Obsługa plków statycznych
+
+Zainstaluj, pomoże to w odswieżaniu prz zmianach kodu: 
+    npm install -g nodemon
