@@ -21,3 +21,5 @@ npm install express pug body-parser cookie-parser connect-flash --save
 
 Zainstaluj, pomoże to w przeładowaniu serwera node po zmianach w plikach projektu git: 
     npm install -g nodemon 
+
+Git : (git commit -a, git push -u origin master)
