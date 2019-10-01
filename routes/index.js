@@ -2,7 +2,7 @@ const express = require('express');
 const DB = require('../db');
 const router = express.Router();
 
-const db = new DB();
+// const db = new DB();
 
 router.get('/', (req, res)=>{
     res.render('home');
