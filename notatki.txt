@@ -32,3 +32,8 @@ git push origin --force --tags
 2) kontrolery
     wykorzystamy moduł connect flash w celu wyswietlenia informacji zwrotnej
     instalujemy moduł obsługujacy sesję: npm install express-session --save
+3) middelware
+4) MySQL 
+        Knex.js: query builder
+        Bookshelf.js: klasyczny ORM
+        npm install knex bookshelf mysql2 --save

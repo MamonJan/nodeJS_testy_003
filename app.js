@@ -12,6 +12,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, 'public')));
 
+// console.log(path)
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
@@ -22,8 +24,15 @@ app.use(session({
     saveUninitialized: true,
     cookie: {}
 }));
+
 app.use(flash());
 
 app.use('/', routes);
+
+//midlleware obsługujacy bład 404
+
+app.use((req, res, next) => {
+    res.status(404).render(404);
+});
 
 module.exports = app;

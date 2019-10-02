@@ -28,6 +28,10 @@ const ApplicationsController = require('../controllers/ApplicationsController');
 
 router.get('/', PagesController.home);
 
-router.post('/applications', ApplicationsController.store);
+// router.post('/applications', ApplicationsController.store);
+
+    router.post('/applications', 
+    ApplicationsController.normalizeData,
+    ApplicationsController.store);
 
 module.exports = router;

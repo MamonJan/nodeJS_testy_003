@@ -1,6 +1,8 @@
 // Store new application
 exports.store = (req, res) => {
-    req.flash('form', req.body.name.split(' ')[0] + ', you are a true hero!');
+    // req.flash('form', req.body.name.split(' ')[0] + ', you are a true hero!');
+    // w zamian dodałem midlleware normalizeData, który modyfikuje nam to samo
+    req.flash('form', req.body.imie + ', you are a true hero!');
     res.redirect('/');
     // res.json({
     //     'name': req.body.name,
@@ -8,3 +10,13 @@ exports.store = (req, res) => {
     //     'message': req.body.message
     // })
 };
+
+// midlleware
+exports.normalizeData = (req, res, next) => {
+    const nameArr = req.body.name.split(' ');
+
+    req.body.imie = nameArr.shift();
+    req.body.nazwisko = nameArr.join(' ');
+
+    next();
+}
