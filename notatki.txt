@@ -28,3 +28,5 @@ usuwam wszystko *.csv
 git filter-branch --force --index-filter "git rm --cached --ignore-unmatch *.csv" --prune-empty --tag-name-filter cat -- --all
 git push origin --force --all
 git push origin --force --tags
+
+2) kontrolery
