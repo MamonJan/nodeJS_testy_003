@@ -23,3 +23,8 @@ Zainstaluj, pomoże to w przeładowaniu serwera node po zmianach w plikach proje
     npm install -g nodemon 
 
 Git : (git commit -a, git push -u origin master)
+
+usuwam wszystko db.js
+git filter-branch --force --index-filter "git rm --cached --ignore-unmatch *.csv" --prune-empty --tag-name-filter cat -- --all
+git push origin --force --all
+git push origin --force --tags
