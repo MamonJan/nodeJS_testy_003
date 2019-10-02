@@ -43,6 +43,13 @@ html
                         .lightbox__actions
                             button.btn.btn--primary Adopt a dog
 
+            if (formMessage.length)
+                .lightbox(v-show="showFeedback")
+                    .lightbox__content
+                        h2.lightbox__header #{ formMessage }
+                        .lightbox__actions.lightbox__actions--centered
+                            button.btn.btn--primary(@click="closeFeedbackLightbox") Close
+
 
         script(src="https://cdn.jsdelivr.net/npm/vue" type="text/javascript")
         script(src="/js/app.js")

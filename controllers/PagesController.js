@@ -1,3 +1,5 @@
-exports.home = function (req, res){
-    res.render('home');
+exports.home = (req, res) => {
+    res.render('home', {
+        formMessage: req.flash('form')
+    });
 };

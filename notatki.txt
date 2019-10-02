@@ -30,3 +30,5 @@ git push origin --force --all
 git push origin --force --tags
 
 2) kontrolery
+    wykorzystamy moduł connect flash w celu wyswietlenia informacji zwrotnej
+    instalujemy moduł obsługujacy sesję: npm install express-session --save

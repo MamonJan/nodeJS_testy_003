@@ -1,8 +1,9 @@
 const express = require('express');
-const DB = require('../db');
+// const DB = require('../db');
 const router = express.Router();
 
 const PagesController = require('../controllers/PagesController');
+const ApplicationsController = require('../controllers/ApplicationsController');
 
 // const db = new DB();
 
@@ -10,11 +11,9 @@ const PagesController = require('../controllers/PagesController');
 //     res.render('home');
 // })
 
-router.get('/', PagesController.home);
-
-router.get('/piotr', function(req, res){
-    res.send("Cześć Piotrek");
-})
+// router.get('/piotr', function(req, res){
+//     res.send("Cześć Piotrek");
+// })
 
 // router.get('/db', (req,res)=>{
 //     console.log('Ktoś puścił bąka');
@@ -27,5 +26,8 @@ router.get('/piotr', function(req, res){
 //     });
 // })
 
+router.get('/', PagesController.home);
+
+router.post('/applications', ApplicationsController.store);
 
 module.exports = router;
