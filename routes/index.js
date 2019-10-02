@@ -30,7 +30,7 @@ router.get('/', PagesController.home);
 
 // router.post('/applications', ApplicationsController.store);
 
-    router.post('/applications', 
+router.post('/applications', 
     ApplicationsController.normalizeData,
     ApplicationsController.store);
 
