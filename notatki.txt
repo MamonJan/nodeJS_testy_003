@@ -37,3 +37,7 @@ git push origin --force --tags
         Knex.js: query builder
         Bookshelf.js: klasyczny ORM
         npm install knex bookshelf mysql2 --save
+
+
+        tworze katalog config i knexfile.js
+        tworzę modele (models)
