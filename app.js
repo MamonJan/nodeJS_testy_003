@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
 const session = require('express-session');
 const routes = require('./routes/index');
+const errorsHandler = require('./middlewares/errors');
 
 const app = express();
 
@@ -31,9 +32,12 @@ app.use('/', routes);
 
 //midlleware obsługujacy bład 404
 
-app.use((req, res, next) => {
-    res.status(404).render('404');
-    next();
-});
+// app.use((req, res, next) => {
+//     res.status(404).render('404');
+//     next();
+// });
+// inne rozwiazanie dla tego middleware
+app.use(errorsHandler.notFound);
+app.use(errorsHandler.catchErrors);
 
 module.exports = app;

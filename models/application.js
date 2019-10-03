@@ -8,6 +8,6 @@ module.exports.create = (application) =>{
     return new Application({
         name: application.name,
         phone: application.phone,
-        message: application.message
+        message__: application.message
     }).save();
 }

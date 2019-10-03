@@ -37,6 +37,42 @@ git push origin --force --tags
         Knex.js: query builder
         Bookshelf.js: klasyczny ORM
         npm install knex bookshelf mysql2 --save
+==================================================================================================================
+database: 
+-- --------------------------------------------------------
+-- Host:                         localhost
+-- Wersja serwera:               10.1.40-MariaDB - mariadb.org binary distribution
+-- Serwer OS:                    Win64
+-- HeidiSQL Wersja:              10.2.0.5599
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+-- Zrzut struktury tabela overment.applications
+CREATE TABLE IF NOT EXISTS `applications` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT '',
+  `phone` varchar(255) DEFAULT '',
+  `message` text,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Zrzucanie danych dla tabeli overment.applications: ~1 rows (około)
+/*!40000 ALTER TABLE `applications` DISABLE KEYS */;
+INSERT INTO `applications` (`id`, `name`, `phone`, `message`, `created_at`) VALUES
+	(0, 'Piotr', '501 79 00 68', 'Mój komunikat', '2019-10-03 09:44:49');
+/*!40000 ALTER TABLE `applications` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+
+========================================================================================================================
 
 
         tworze katalog config i knexfile.js
