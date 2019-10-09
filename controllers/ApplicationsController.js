@@ -2,12 +2,16 @@ const Application = require('../models/application');
 
 // Store new application
 exports.store = async (req, res, next) => {
-
-    const application = await Application.create({
-        'name': req.body.imie,
-        'phone': req.body.phone,
-        'message': req.body.message
-    });
+//wprowadzam try catch, gdyż poprzednio .then() obsłuzyło ew. błąd
+try {
+        await Application.create({
+            'name': req.body.imie,
+            'phone': req.body.phone,
+            'message': req.body.message
+        });
+    } catch(err){
+        return next(err);
+    }
     req.flash('form', req.body.imie + ', you are a true hero!');
     res.redirect('/');
 };
