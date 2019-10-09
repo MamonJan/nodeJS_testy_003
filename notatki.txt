@@ -77,3 +77,5 @@ INSERT INTO `applications` (`id`, `name`, `phone`, `message`, `created_at`) VALU
 
         tworze katalog config i knexfile.js
         tworzę modele (models)
+
+walidator npm install express-validator --save
